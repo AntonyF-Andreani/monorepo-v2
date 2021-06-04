@@ -1,0 +1,23 @@
+import { action } from '@storybook/addon-actions'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Button } from './Button'
+
+<Meta title='template/Button' component={Button} />
+
+# Button
+
+Ejemplo de Boton con estilos, se puede escribir con con `MDX` y redefiinir la historia del componente `<Button />`
+en el medio de la documentaicon markdown
+
+
+<Canvas>
+  <Story
+    name='Regular'
+    args={{
+      label: 'Esto es un boton',
+      onClick: action('clicked')
+    }}
+  >
+    {args => <Button {...args} />}
+  </Story>
+</Canvas>
